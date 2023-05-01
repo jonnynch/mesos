@@ -2,7 +2,20 @@
     "id": "basic-3",
     "cmd": "python3 -m http.server $PORT0",
     "cpus": 0.5,
-    "mem": 32.0,
+    "mem": 128,
+    "healthChecks": [
+      {
+        "gracePeriodSeconds": 15,
+        "ignoreHttp1xx": false,
+        "intervalSeconds": 3,
+        "maxConsecutiveFailures": 2,
+        "portIndex": 0,
+        "timeoutSeconds": 2,
+        "delaySeconds": 15,
+        "protocol": "HTTP",
+        "path": "/"
+      }
+    ],
     "container": {
       "type": "DOCKER",
       "docker": {

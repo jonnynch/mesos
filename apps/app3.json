@@ -1,0 +1,14 @@
+{
+    "id": "helloworld",
+    "container": {
+        "docker": {
+            "image": "ubuntu:14.04"
+        },
+        "type": "DOCKER",
+        "volumes": []
+    },
+    "cmd": "while true; do echo hello world; sleep 1; done",
+    "cpus": 0.1,
+    "mem": 32.0,
+    "instances": 1
+}
