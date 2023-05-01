@@ -13,8 +13,8 @@ docker run --rm -d --privileged -p 5050:5050 -p 5051:5051 -p 8080:8080 -p 31000:
 ``` 
 ## deploy job
 ```
-curl -X POST http://127.0.0.1:8080/v2/apps -d @frameworks/app.json -H "Content-type: application/json"
-curl -X POST http://127.0.0.1:8080/v2/apps -d @frameworks/app2.json -H "Content-type: application/json"
+curl -X POST http://marathon.localdev.me:8080/v2/apps -d @apps/app.json -H "Content-type: application/json"
+curl -X POST http://marathon.localdev.me:8080/v2/apps -d @apps/app2.json -H "Content-type: application/json"
 ```
 For app2, you may need to manual `docker pull python:3` within mesos-marathon container to avoid timeout
 
